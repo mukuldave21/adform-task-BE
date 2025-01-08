@@ -18,7 +18,7 @@ const startServer = async () => {
   app.use(cors())
   app.use(bodyParser.urlencoded({ extended: true }));
   app.listen({ port: process.env.PORT }, () => {
-    console.log(`Server is running at http://localhost:4000${server.graphqlPath}`);
+    console.log(`Server is running at http://localhost:${process.env.PORT}${server.graphqlPath}`);
   });
 };
 
